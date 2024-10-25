@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+  font-family: cursive;
+}
+.contrainer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom left,
+    #000000f2,
+    #000000f2
+  ); /* แก้ไขทิศทางและรูปแบบ */
+}
+
+.name {
+  font-size: large;
+  padding-right: 10px;
+}
+.button-name {
+  font-size: small;
+  background-color:#181c1425;
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+  padding-inline: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* เงาขาวทั่วกรอบ */
+  border-radius: 10px;
+}
+.button-name:hover{
+        border-width: 30px;
+    }
+.item-top {
+    display: flex;
+    justify-content: space-between; /* จัดให้องค์ประกอบอยู่ห่างกัน */
+    align-items: center; /* จัดแนวกลางในแนวตั้ง */
+    width: 100%; /* ให้เต็มความกว้างของกรอบ */
+  }
+  
+  .item {
+    border-radius: 40px;
+    width: auto;
+    max-width: 800px;
+    min-width: 400px;
+    display: flex;
+    justify-content: space-between; /* จัดให้องค์ประกอบอยู่ห่างกัน */
+    align-items: flex-start; /* จัดแนวเริ่มต้นที่ด้านบน */
+    margin: 60px;
+    padding: 45px;
+    flex-flow: column wrap;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3),
+      -1px -1px 2px rgba(255, 255, 255, 0.5);
+      p{
+        font-size: small;
+        color: #ECDFCC;
+      }
+  }
+  .item-bottom{
+    .inside_top{
+        font-size: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .inside_bottom{
+        font-size: 20px;
+        color: #ecdfcc9f;
+    }
+  }
+
