@@ -3,9 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   color: aliceblue;
-  font-family: cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.text{
+.text {
   box-shadow: 0px 0px 1px 0px #f0f0f0;
   border-radius: 40px;
   height: auto;
@@ -16,37 +16,38 @@
   min-width: 500px;
   flex-grow: 1;
 }
-.avatar{
+.avatar {
   box-shadow: 0px 0px 1px 0px #f0f0f0;
   border-radius: 40px;
-  height: 45vh;
+  height: 42vh;
   display: flex;
   flex-direction: column;
   overflow: hidden; /* ซ่อนส่วนที่เกินของภาพ */
   width: 300px;
   min-width: 250px;
-  margin-left:30px ;
+  margin-left: 30px;
   img {
     width: 100%; /* ปรับขนาดให้เต็มกรอบ */
     height: 100%; /* ปรับขนาดให้เต็มกรอบ */
     object-fit: cover; /* ทำให้ภาพเต็มกรอบโดยไม่ทำให้เบี้ยว */
   }
 }
-.contrainer{
+.contrainer {
   display: flex;
   padding: 10px 10px 2px 0px;
-  justify-content:space-between;
-  
-  .gitHub{
+  justify-content: space-between;
+
+  .gitHub {
     box-shadow: 0px 0px 1px 0px #f0f0f0;
     border-radius: 10px;
     padding: 10px;
-    a{
+    a {
       text-decoration: none;
       color: #ffffff;
     }
   }
-  .gitHub:hover{
+
+  .gitHub:hover {
     box-shadow: 0px 0px 5px 0px #f0f0f0;
     border-radius: 10px;
     border-width: 5px;
@@ -58,8 +59,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:100px 200px 100px 200px;
-  flex-wrap:row nowrap;
+  margin: 100px 200px 100px 200px;
+  flex-wrap: row nowrap;
 }
 body {
   background-color: #000000f2;
@@ -73,10 +74,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:10px ;
-  .items{
+  margin-top: 20px;
+ 
+  .items {
     margin-right: 10px;
-    
   }
 }
 
@@ -88,13 +89,11 @@ body {
   align-items: center;
   font-size: 24px;
   transition: opacity 0.5s ease-in-out;
-  
 }
-.marquee p:hover{
+.marquee p:hover {
   animation: slide 50s linear infinite;
   transition: opacity 0.5s ease-in-out;
 }
-
 
 @keyframes slide {
   0% {
@@ -110,6 +109,43 @@ body {
   100% {
     transform: translateX(-100%); /* เลื่อนออกจากซ้าย */
     opacity: 0; /* จางลง */
+  }
+}
+
+@media (max-width: 1246px) {
+  /* CSS สำหรับหน้าจอขนาดใหญ่ */
+  .avatar {
+    margin-left: 15px; /* ลบระยะซ้าย */
+    height: 328px;
+    img {
+      width: 100%; /* ปรับขนาดให้เต็มกรอบ */
+      height: 100%; /* ปรับขนาดให้เต็มกรอบ */
+      object-fit: cover; /* ทำให้ภาพเต็มกรอบโดยไม่ทำให้เบี้ยว */
+    }
+  }
+}
+@media (min-width: 1600px) {
+  /* CSS สำหรับหน้าจอขนาดใหญ่ */
+  .avatar {
+    margin-left: 15px; /* ลบระยะซ้าย */
+    height: 290px;
+    img {
+      width: 100%; /* ปรับขนาดให้เต็มกรอบ */
+      height: 100%; /* ปรับขนาดให้เต็มกรอบ */
+      object-fit: cover; /* ทำให้ภาพเต็มกรอบโดยไม่ทำให้เบี้ยว */
+    }
+  }
+}
+@media (max-width: 1204px) {
+  /* CSS สำหรับหน้าจอขนาดใหญ่ */
+  .avatar {
+    margin-left: 15px; /* ลบระยะซ้าย */
+    height: 333px;
+    img {
+      width: 100%; /* ปรับขนาดให้เต็มกรอบ */
+      height: 100%; /* ปรับขนาดให้เต็มกรอบ */
+      object-fit: cover; /* ทำให้ภาพเต็มกรอบโดยไม่ทำให้เบี้ยว */
+    }
   }
 }
 @media (max-width: 768px) {

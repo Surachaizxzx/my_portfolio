@@ -1,0 +1,18 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.items-grid{
+    background-color: aqua;
+    margin-top: 20px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 1px 0px #ffffff;
+    width: 535px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
