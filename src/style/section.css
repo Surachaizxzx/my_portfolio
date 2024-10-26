@@ -106,19 +106,11 @@ body {
 }
 
 @keyframes slide {
-  0% {
-    transform: translateX(100%); /* เริ่มที่ขวา */
-    opacity: 1; /* โปร่งใส */
+  from {
+    transform: translateX(0%);
   }
-  10% {
-    opacity: 1; /* โปร่งใส */
-  }
-  90% {
-    opacity: 1; /* โปร่งใส */
-  }
-  100% {
-    transform: translateX(-100%); /* เลื่อนออกจากซ้าย */
-    opacity: 0; /* จางลง */
+  to {
+    transform: translateX(100%);
   }
 }
 
