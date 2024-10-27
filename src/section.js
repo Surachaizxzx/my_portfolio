@@ -3,10 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './style/section.css'
-const avatar = require('./images/avatar.jpg')
+import Article from "./article";
+const avatar = require('./images/avatar.png')
 export default function Section() {
     return (
-        <>
+        <div className="section_artical">
             <div className='contrainer-section'>
                 <div className="text">
                     <div className="contrainer">
@@ -19,14 +20,15 @@ export default function Section() {
                 </div>
                 <div className="avatar"><img src={avatar} alt="avatar"></img></div>
             </div>
-            <div style={{ color: 'lightgray',display:"flex",justifyContent:"center" }}>Expertise in the following tools
+            <div style={{ color: 'lightgray', display: "flex", justifyContent: "center", margin: '10px' }}>Expertise in the following tools
             </div>
-           
-           <div style={{display:"flex",justifyContent:"center" }}>
-            <div className="marquee">
-                <p><div className="items"><i class="bi bi-github"> GitHub</i></div><div className="items"><i class="bi bi-filetype-css"> CSS</i></div><div className="items"><i class="bi bi-filetype-js"> Node.js & React</i></div><div className="items"><i class="bi bi-person-rolodex"> PostMan </i></div><div className="items"><i class="bi bi-database"> SQL & NO SQL</i></div><div className="items"><i class="bi bi-filetype-php"></i> PHP</div></p>
+
+            <div style={{ display: "flex", justifyContent: "center" }}>
+                <div className="marquee">
+                    <p><div className="items"><i class="bi bi-github"> GitHub</i></div><div className="items"><i class="bi bi-filetype-css"> CSS</i></div><div className="items"><i class="bi bi-filetype-js"> Node.js & React</i></div><div className="items"><i class="bi bi-person-rolodex"> PostMan </i></div><div className="items"><i class="bi bi-database"> SQL & NO SQL</i></div><div className="items"><i class="bi bi-filetype-php"></i> PHP</div></p>
+                </div>
             </div>
-            </div>
-        </>
+            {/* <Article /> */}
+        </div>
     );
 }

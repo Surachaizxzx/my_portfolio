@@ -1,11 +1,9 @@
 import React from 'react';
-import Section from './section';
-import Article from './article';
+import Nav from './nav';
 function App() {
   return (
     <>
-    <Section/>
-    <Article/>
+      <Nav />
     </>
   );
 }

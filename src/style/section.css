@@ -5,162 +5,96 @@
   color: aliceblue;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.text {
-  box-shadow: 0px 0px 1px 0px #f0f0f0;
-  border-radius: 40px;
-  height: auto;
+.contrainer-nav {
   display: flex;
-  flex-direction: column;
-  padding: 50px;
-  width: 600px;
-  min-width: 500px;
-  flex-grow: 1;
-}
-.avatar {
-  box-shadow: 0px 0px 1px 0px #f0f0f0;
-  border-radius: 40px;
-  height: 42vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* ซ่อนส่วนที่เกินของภาพ */
-  width: 300px;
-  min-width: 250px;
-  margin-left: 30px;
-  img {
-    width: 100%; /* ปรับขนาดให้เต็มกรอบ */
-    height: 100%; /* ปรับขนาดให้เต็มกรอบ */
-    object-fit: cover; /* ทำให้ภาพเต็มกรอบโดยไม่ทำให้เบี้ยว */
-  }
-}
-.avatar:hover {
-  box-shadow: 0px 0px 10px 0px #f0f0f0;
-  cursor: pointer;
-}
-.text:hover {
-  box-shadow: 0px 0px 5px 0px #f0f0f0;
-  cursor: pointer;
-}
-.contrainer {
-  display: flex;
-  padding: 10px 10px 2px 0px;
+  padding: 10px 0px 2px 0px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   justify-content: space-between;
+  align-items: center;
+  li {
+    list-style: none;
+    margin-right: 30px;
+    padding: 5px 15px 5px 15px;
 
-  .gitHub {
-    box-shadow: 0px 0px 1px 0px #f0f0f0;
-    border-radius: 10px;
-    padding: 10px;
-    a {
-      text-decoration: none;
-      color: #ffffff;
-    }
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
   }
-
-  .gitHub:hover {
-    box-shadow: 0px 0px 5px 0px #f0f0f0;
-    border-radius: 10px;
-    border-width: 5px;
-    border-color: gray;
+  li:hover {
+    box-shadow: 0px 0px 1px 0px #f0f0f0;
+    border-radius: 15px;
     cursor: pointer;
   }
-}
-.contrainer-section {
-  /* background: #d40d0d; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 100px 200px 100px 200px;
-  flex-wrap: row nowrap;
+  .img-contrainer {
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      margin: 10px 10px 20px;
+    }
+  }
 }
 body {
   background-color: #000000f2;
+  min-width: 768px; /* ตั้งความกว้างขั้นต่ำ */
 }
-.marquee {
-  width: 600px; /* ความกว้างของพื้นที่ข้อความ */
-  overflow: hidden; /* ซ่อนข้อความที่เกิน */
-  white-space: nowrap; /* ไม่ให้ข้อความขึ้นบรรทัดใหม่ */
-  box-sizing: border-box; /* ให้รวม padding กับความกว้าง */
-  color: lightgray; /* สีของข้อความ */
+.contrainer {
+  display: flex;
+}
+.contrainer-section {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  align-items: flex-start;
+  max-width: 1000px;
+  max-height: 300px;
 
-  .items {
-    margin-right: 10px;
+  .avatar {
+    box-shadow: 0px 0px 1px 0px #f0f0f0;
+    border-radius: 5%;
+    max-width: 350px;
+    max-height: 325px;
+    min-width: 200px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .text {
+    width: 100%;
+    box-shadow: 0px 0px 1px 0px #f0f0f0;
+    border-radius: 5%;
+    height: 100%;
+    min-width: 370px;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    padding: 7%;
+    p {
+      font-size: 100%;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
-
-.marquee p {
-  display: inline-block; /* ทำให้พารากราฟอยู่ในบรรทัดเดียว */
-  animation: slide 20s linear infinite; /* ใช้การเคลื่อนไหว slide */
+.section_artical {
+  margin: 0% 10% 10% 10%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  transition: opacity 0.5s ease-in-out;
-}
-.marquee p:hover {
-  animation: slide 50s linear infinite;
-  transition: opacity 0.5s ease-in-out;
-  cursor: pointer;
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
-@media (max-width: 1246px) {
-  /* CSS สำหรับหน้าจอขนาดใหญ่ */
-  .avatar {
-    margin-left: 15px; /* ลบระยะซ้าย */
-    height: 328px;
-    img {
-      width: 100%; /* ปรับขนาดให้เต็มกรอบ */
-      height: 100%; /* ปรับขนาดให้เต็มกรอบ */
-      object-fit: cover; /* ทำให้ภาพเต็มกรอบโดยไม่ทำให้เบี้ยว */
-    }
-  }
-}
-@media (min-width: 1600px) {
-  /* CSS สำหรับหน้าจอขนาดใหญ่ */
-  .avatar {
-    margin-left: 15px; /* ลบระยะซ้าย */
-    height: 290px;
-    img {
-      width: 100%; /* ปรับขนาดให้เต็มกรอบ */
-      height: 100%; /* ปรับขนาดให้เต็มกรอบ */
-      object-fit: cover; /* ทำให้ภาพเต็มกรอบโดยไม่ทำให้เบี้ยว */
-    }
-  }
-}
-@media (max-width: 1204px) {
-  /* CSS สำหรับหน้าจอขนาดใหญ่ */
-  .avatar {
-    margin-left: 15px; /* ลบระยะซ้าย */
-    height: 333px;
-    img {
-      width: 100%; /* ปรับขนาดให้เต็มกรอบ */
-      height: 100%; /* ปรับขนาดให้เต็มกรอบ */
-      object-fit: cover; /* ทำให้ภาพเต็มกรอบโดยไม่ทำให้เบี้ยว */
-    }
-  }
-}
-@media (max-width: 768px) {
-  .contrainer-section {
-    flex-direction: column; /* เปลี่ยนเป็นแนวตั้งเมื่อหน้าจอเล็กกว่า 768px */
-  }
-  .avatar {
-    margin-left: 0; /* ลบระยะซ้าย */
-    margin-top: 50px;
-    img {
-      width: 100%; /* ปรับขนาดให้เต็มกรอบ */
-      height: 100%; /* ปรับขนาดให้เต็มกรอบ */
-      object-fit: cover; /* ทำให้ภาพเต็มกรอบโดยไม่ทำให้เบี้ยว */
-    }
-  }
 }
