@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.grid-maincontain {
+  margin-top: 1%;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* สร้างคอลัมน์ 3 ช่องที่มีความกว้างเท่ากัน */
+  display: flex;
+  justify-content: center;
+  gap: 10%; /* ระยะห่างระหว่างคอลัมน์และแถว */
+  width: 79vw; /* ความสูงของคอนเทนเนอร์เต็มพื้นที่หน้าจอ */
+  max-width:1215px;
+  .item-project {
+    width: 100vw;
+    max-width:1215px;
+    background-color: #000000;
+    border-radius: 50spx;
+    padding: 20px;
+    height: 100%; /* ให้เนื้อหาภายในเต็มพื้นที่ของแต่ละช่อง */
+    display: flex; /* ใช้ flexbox สำหรับการจัดเรียงภายใน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+    
+  }
+}

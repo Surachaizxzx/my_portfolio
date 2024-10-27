@@ -28,7 +28,7 @@ export default function Section() {
                     <p><div className="items"><i class="bi bi-github"> GitHub</i></div><div className="items"><i class="bi bi-filetype-css"> CSS</i></div><div className="items"><i class="bi bi-filetype-js"> Node.js & React</i></div><div className="items"><i class="bi bi-person-rolodex"> PostMan </i></div><div className="items"><i class="bi bi-database"> SQL & NO SQL</i></div><div className="items"><i class="bi bi-filetype-php"></i> PHP</div></p>
                 </div>
             </div>
-            {/* <Article /> */}
+            <Article />
         </div>
     );
 }

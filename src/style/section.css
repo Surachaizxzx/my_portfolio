@@ -12,6 +12,7 @@
   margin-bottom: 20px;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   li {
     list-style: none;
     margin-right: 30px;
@@ -52,42 +53,54 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  max-width: 1000px;
-  max-height: 300px;
+  max-width: 1216px;
+  width: 79vw; /* ความสูงของคอนเทนเนอร์เต็มพื้นที่หน้าจอ */
+  
+  height: auto; /* ปรับความสูงตามเนื้อหา */
 
   .avatar {
     box-shadow: 0px 0px 1px 0px #f0f0f0;
-    border-radius: 5%;
+    border-radius: 8%;
     max-width: 350px;
-    max-height: 325px;
+    max-height: 298px;
     min-width: 200px;
-    min-height: 200px;
+    min-height: 295px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin-left: 5%;
     img {
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: 70%;
+      min-width: 300px;
+      min-height: 300px;
       object-fit: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: drop-shadow(0.5px);
     }
   }
   .text {
     width: 100%;
-    box-shadow: 0px 0px 1px 0px #f0f0f0;
-    border-radius: 5%;
-    height: 100%;
-    min-width: 370px;
-    flex-grow: 1;
-    flex-wrap: nowrap;
-    display: flex;
-    flex-direction: column;
-    object-fit: contain;
-    padding: 7%;
+  box-shadow: 0px 0px 1px 0px #f0f0f0;
+  border-radius: 25px;
+  height: auto; /* ปรับความสูงตามเนื้อหา */
+  min-height :298px; ; /* ลบ max-height ออกเพื่อไม่ให้จำกัดความสูง */
+  min-width: 370px;
+  padding: 5%;
+  overflow: visible; /* ให้เนื้อหาขยายได้ */
+  flex-grow: 1;
+
     p {
       font-size: 100%;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
+      min-height: fit-content;
+      max-height: fit-content;
+     
     }
   }
 }
@@ -97,4 +110,30 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 0px 0px 1px 0px #f0f0f0;
+}
+@media (max-width: 768px)  {
+  .contrainer-section {
+    flex-direction: column;
+    align-items: center; /* จัดให้อยู่ตรงกลางเมื่อเป็น column */
+    max-width: 100%; /* ให้เต็มหน้าจอขนาดเล็ก */
+    min-width: 679px;
+    height: auto; /* ปรับให้สูงตามเนื้อหา */
+  }
+
+  .contrainer-section .avatar {
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่าง avatar และ text */
+    /* max-width: 80%; ปรับขนาด avatar ให้เหมาะสม */
+    width: 680px;
+    margin-top: 50px;
+    margin-left: 0px;
+  }
+
+  .contrainer-section .text {
+    width: 100%; /* ให้ text ขยายเต็มหน้าจอ */
+    height: 1vh; /* ปรับความสูงตามเนื้อหา */
+    padding: 10%; /* ปรับระยะ padding */
+  width: 80vw; /* ความสูงของคอนเทนเนอร์เต็มพื้นที่หน้าจอ */
+  }
 }
