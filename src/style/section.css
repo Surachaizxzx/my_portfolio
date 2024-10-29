@@ -4,7 +4,8 @@
   padding: 0;
   background: #0a0a0a;
   color: #ffffff;
-} /*{1080}*/
+  font-family: Arial, Helvetica, sans-serif;
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -39,10 +40,12 @@
     }
   }
   .aboutMe-container {
+    max-height: fit-content;
     display: flex;
-    padding: 2vh 5vw 2vh 5vw;
+    padding: 2vh 10vw 2vh 10vw;
     gap: 2vw;
     justify-content: space-between;
+
     .about_text {
       padding: 1%;
       box-shadow: 0px 0px 1px 0px #ffffff;
@@ -51,8 +54,18 @@
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px;
       flex: 1 0 30vw;
+      p {
+        margin-top: 1%;
+        margin-bottom: 1%;
+      }
+      h1,
+      h4 {
+        margin-top: 1%;
+        margin-bottom: 1%;
+      }
       .aboutMe_detail {
-        margin-top: 1vh;
+        margin: 3vh;
+
         .Git_myName {
           display: flex;
           justify-content: space-between;
@@ -81,8 +94,12 @@
         }
       }
     }
+    .about_text:hover {
+      box-shadow: 0px 0px 10px 0px #ffffff;
+      cursor: pointer;
+    }
+
     .about_img {
-      box-shadow: 0px 0px 1px 0px #ffffff;
       box-shadow: 0px 0px 1px 0px #ffffff;
       border-top-left-radius: 30px;
       border-bottom-left-radius: 30px;
@@ -91,11 +108,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex: 0 0 30vw;
+      overflow: hidden;
+      flex: 0 0 20vw;
       .container_image {
-        width: 200px;
+        width: fit-content;
         height: 100%;
-        object-fit: contain;
         img {
           width: 100%;
           height: 100%;
@@ -103,27 +120,138 @@
         }
       }
     }
+    .about_img:hover {
+      box-shadow: 0px 0px 10px 0px #ffffff;
+      cursor: pointer;
+    }
+  }
+  .article_container {
+    flex: 1 0 1fr;
+    padding: 2vh 10vw 2vh 10vw;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 2vh 10vw 2vh 10vw;
+    background: #fdfdfd;
+    gap: 3vw;
+    .Article_Item {
+      display: flex;
+      flex-direction: column;
+      padding: 4%;
+      box-shadow: 0px 0px 1px 0px #ffffff;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      flex: 1 0 30vw;
+      display: flex;
+      .Main_Inside_Item {
+        overflow: hidden;
+        font-size: 100%;
+        display: flex;
+        flex-direction: column;
+        .Img_contain {
+          display: flex;
+          justify-content: center;
+          max-height: 25vh;
+          overflow: hidden;
+          .Item_img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            min-height: 25vh;
+          }
+        }
+        .Img_contain:hover {
+          .Item_img {
+            height: 110%;
+            width: 110%;
+            object-fit: contain;
+            min-height: 25vh;
+          }
+        }
+        .Text_contain {
+          display: flex;
+          font-size: 100%;
+          max-height: 20vh;
+          flex-direction: column;
+          .Topic {
+            display: flex;
+            align-items: center;
+            flex-basis: 3vw;
+            flex-grow: 0;
+            flex-shrink: 0;
+            p {
+              padding-left: 1vw;
+              margin-bottom: 0px;
+            }
+            h6 {
+              margin-bottom: 0px;
+              font-weight: bold;
+            }
+          }
+          .Detail {
+            h8 {
+              font-weight: bold;
+            }
+            p {
+              overflow: scroll;
+              max-height: 10vh;
+              scrollbar-width: none; /* Firefox */
+              -ms-overflow-style: none; /* Internet Explorer 10+ */
+            }
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 1080px) {
-  .aboutMe-container {
-    display: flex;
-    flex-direction: column;
-    .aboutMe_detail {
-      margin: 2vh;
+  .main-container {
+    font-size: 95%;
+    background: #ffffff;
+    .aboutMe-container {
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      padding: 2vh 5vw 2vh 5vw;
       .about_text {
-        font-size: 85%;
-        padding-top: 1000px;
-        h4 {
-          display: flex;
-          margin: 0;
-          justify-content: flex-start;
-          align-items: center;
-        }
-        .Git_myName {
-          display: flex;
+        display: flex;
+        max-height: fit-content;
+        .aboutMe_detail {
+          margin: 2vh;
+          font-size: 95%;
+
+          max-height: fit-content;
+          h4 {
+            display: flex;
+            margin: 0;
+            justify-content: flex-start;
+            align-items: center;
+          }
+          .Git_myName {
+            display: flex;
+          }
         }
       }
+      .about_text:hover {
+        box-shadow: 0px 0px 10px #ffffff;
+      }
+      .about_img {
+        .container_image {
+          img {
+            width: 110%;
+            height: 110%;
+            object-fit: contain;
+          }
+        }
+      }
+      .about_img:hover {
+        box-shadow: 0px 0px 10px 0px #ffffff;
+        cursor: pointer;
+      }
+    }
+    .article_container {
     }
   }
 }
