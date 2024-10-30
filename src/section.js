@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './style/section.css'
 import Article from "./article";
+import Animation from "./animation";
 const avatar = require('./images/avatar.png')
 export default function Section() {
     return (
