@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './style/section.css'
 import Article from "./article";
+import Animation from "./animation";
 const avatar = require('./images/avatar.png')
 export default function SectionScreen() {
     return (
@@ -25,9 +26,15 @@ export default function SectionScreen() {
                         <div className="container_image"><img src={avatar} alt="avatar"></img></div>
                     </div>
                 </div >
+                <div className='intro'><div className="intro_text">" Expertise in the following tools "</div></div>
+                <div className="Animation_container">
+
+                    <Animation />
+                </div>
                 <div className="article_container">
                     <Article />
                 </div>
+
             </div >
         </>
     );
