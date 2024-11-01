@@ -45,6 +45,7 @@
     gap: 2vw;
     justify-content: space-between;
     .about_text {
+      background: #0a0a0a2f;
       padding: 1%;
       box-shadow: 0px 0px 2px 0px #ffffff;
       border-top-left-radius: 30px;
@@ -133,6 +134,7 @@
     gap: 3vw;
     .Article_Item {
       display: flex;
+      background: #0a0a0a2f;
       flex-direction: column;
       padding: 4%;
       box-shadow: 0px 0px 2px 0px #ffffff;
@@ -269,6 +271,27 @@
     }
   }
 }
+.main_contact {
+  background: #ffffff;
+  height: auto;
+  .container_topic {
+    display: flex;
+    justify-content: center;
+  }
+  .container_img {
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: 30vh;
+    margin: 2%;
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+      width: 50%;
+      height: 100%;
+    }
+  }
+}
 @keyframes slideIn {
   0% {
     transform: translateX(-100%); /* เริ่มที่ซ้ายสุด */
@@ -285,9 +308,7 @@
 @media (max-width: 1080px) {
   .main-container {
     font-size: 95%;
-    background: #ffffff;
     .aboutMe-container {
-      background: #ffffff;
       display: flex;
       flex-direction: column;
       padding: 2vh 5vw 2vh 5vw;
