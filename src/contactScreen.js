@@ -16,8 +16,8 @@ export default function Contact() {
                         <p>Email : surachaikai2545@gmail.com</p>
                     </div></span>
                     <span className="contact_item"><div className="Inside_item"><i class="bi bi-github"></i>
-                        <p>Phone : +6640261977</p>
-                        <p>Email : surachaikai2545@gmail.com</p>
+                        <p>Github : https://github.com/Surachaizxzx</p>
+
                     </div></span>
                 </div >
             </div >

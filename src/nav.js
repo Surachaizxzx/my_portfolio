@@ -5,6 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './style/section.css'
 import SectionScreen from "./sectionscreen";
 import Contact from "./contactScreen";
+import Resume from "./resume";
 const webLogo = require('./images/weblogo.png');
 export default function Nav() {
     const [page, setCurrentPage] = useState('home');
@@ -20,7 +21,7 @@ export default function Nav() {
             </div >
             {page === 'home' ? < SectionScreen /> : ''}
             {page === 'contact' ? <Contact /> : ''}
-            {page === 'my_resume' ? '' : ''}
+            {page === 'my_resume' ? <Resume /> : ''}
         </div >
     );
 }
