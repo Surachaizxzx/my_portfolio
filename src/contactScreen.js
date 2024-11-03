@@ -7,8 +7,9 @@ export default function Contact() {
                 <div className="container_topic">
                     <h1>Contact</h1>
                 </div >
-                <div className="container_img"><img src={profile} alt="profile"></img><div className="contact">
-                </div>
+                <div className="img_con">
+                    <div className="container_img"><img src={profile} alt="profile"></img>
+                    </div>
                 </div>
                 <div className="container_contact">
                     <span className="contact_item"><div className="Inside_item"><i class="bi bi-telephone"></i>
