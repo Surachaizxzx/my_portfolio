@@ -5,6 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './style/section.css'
 import Article from "./article";
 import Animation from "./animation";
+import Tool from "./tool";
 const avatar = require('./images/avatar.png')
 export default function SectionScreen() {
     return (
@@ -33,6 +34,9 @@ export default function SectionScreen() {
                 </div>
                 <div className="article_container">
                     <Article />
+                </div>
+                <div className="tool_container">
+                    <Tool />
                 </div>
 
             </div >
