@@ -15,15 +15,16 @@ export default function Article() {
                         Trained the model using YOLOv8 with a dataset of over 8,000 images.</p></div>
                 </div>
 
-            </div></div >
+            </div>
+            </div >
             <div className="Article_Item"><div className="Main_Inside_Item">
                 <div className='Img_contain' ><img className="Item_img" src={shorturl} alt='shorturl'></img></div>
                 <div className='Text_contain'>
                     <div className='Topic'><h6>Project Name : </h6><p>ShortURL Website</p></div>
                     <div className='Detail'><h8>" Project info " </h8><p>This project is designed to allow users to easily create short URLs from long URLs, enabling quick access to content without needing to type the entire long URL. This enhances the convenience of sharing links.</p></div>
                 </div>
-
-            </div></div >
+            </div>
+            </div >
         </>
     );
 }
