@@ -56,10 +56,6 @@ export default function Tool() {
                     }}>Dev Tools</div>
                     <div className="tools_detail">
                         <div className="toolsv2">
-                            <div className="tool">
-                                <img src={dart1} alt="dart1" />
-                                <h5>Dart</h5>
-                            </div>
                             <div className="tool"><img src={Postman} alt="Postman" /><h5>Postman</h5></div>
                             <div className="tool"><img src={Git} alt="Git" /><h5>Git</h5></div>
                         </div>
